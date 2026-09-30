@@ -1,0 +1,35 @@
+1. What are NOSSRANGE and SSRANGE?
+
+Ans:
+
+In COBOL, compiler directives SSRANGE and NOSSRANGE determine whether subscript out of range checking is allowed or not. 
+Bounds checking is enabled via SSRANGE, which causes an error and program termination if an array subscript exceeds its 
+allowed boundaries. When subscript bounds are exceeded, the program can still run since NOSSRANGE turns off this checking.
+In situations where such checks are handled manually or are not required, NOSSRANGE offers flexibility for older code.
+
+2.Which mode required in order to update a file?
+
+Ans - I-O
+
+3.What is the COBOL verb “INSPECT,” and what are some typical uses for it?
+
+Ans:
+
+In COBOL, the INSPECT verb is used to look for and work with characters inside a data item. 
+Its goal is to analyse or change data using a variety of procedures, such as character translation, character replacement, or count of occurrences. 
+The parsing of input data, formatting of output data, data validation, and data transformation in accordance with particular needs in business applications are common scenarios whereINSPECT is employed. 
+It offers a strong tool for effectively managing character manipulation chores in COBOL systems.
+
+4. What distinguishes a SEARCH statement from a SEARCH ALL statement?
+
+Ans:
+
+A SEARCH command in COBOL is used to iteratively search a table for a particular value and then take appropriate action 
+in response to the finding. Once a match is identified, the search is terminated.
+A SEARCH ALL command can similarly be used to look for a certain value in a table,
+ but it keeps looking even after a match is discovered. 
+This enables it to locate every instance of the given value in the table.
+The SEARCH ALL command usually arranges the table before continuing the search after locating the first match. 
+This sorting makes sure that the search is more effective by using binary search techniques to find every instance of the 
+value rapidly, especially for huge datasets.
+

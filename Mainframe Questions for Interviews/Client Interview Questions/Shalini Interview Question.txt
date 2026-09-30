@@ -1,0 +1,23 @@
+Recent Project
+Challenges faced during code deployment
+IBM Developer tools uses or not
+Git knowledge
+JCl sort functionality
+Cond statement
+how to convert batch to online
+CICS functionality
+user is not authorized for some transaction .. what can have happened in that case
+strength /weakness
+agile/waterfall.. which is best
+join key
+what are the challenges you faced in your project .. different team
+debug tools
+ways to restart the abend steps in jcl
+CICS macros
+After build and unit testing what i did whether testing team tested the changes or directly deployed the changes into production.
+done system testing also in past or only unit testing
+what are the steps for development process
+db2 abend codes faced in projects
+what is 811 and how to resolve
+Lock mechanism
+how to avoid deadlock

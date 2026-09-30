@@ -1,0 +1,190 @@
+COBOL
+
+1. Diff b/w next sentence and continue statement?
+2. What is the use 66 and 88 levels in COBOL?
+3. What is static call and dynamic call?
+4. Differentiate between subscript and index in COBOL?
+5. What is meant by an IN-LINE PERFORM?
+6. What are the different types of perform used?
+7. What is the difference b/w comp and comp-3?
+8. What is Redefines clause?
+
+JCL
+
+A jcl has 3 steps and if i want to skip 2 step what is the process to do that?
+
+
+1. How can you check if a file is empty using JCL?
+
+Ans - When the file is used as input in IDCAMS, job completes with a warning (return code 4) if the file is empty.
+
+2. A JCL has 4 steps and job abends in step2. How to restart the job from step2?
+
+Ans - Add restart parameter in job card, RESTART = STEP2
+
+3. What are the ways of passing data to a COBOL program from JCL?
+
+Ans - Data can be passed to a COBOL program through files, PARM parameter and SYSIN DD statement.
+
+4. What is GDG?
+
+Generation Data Group is a group of chronologically or functionally related datasets. 
+GDGs are processed periodically, often by adding a new generation, retaining previous generations, 
+and sometimes discarding the oldest generation.
+
+5. What is COND=EVEN ?
+
+Ans - It means execute this step even if any of the previous steps, terminated abnormally.
+
+6.  What is the difference between specifying DISP=OLD and DISP=SHR for a dataset?
+
+Ans - DISP=OLD denotes exclusive control of the dataset; DISP=SHR means there is no exclusivity.
+
+7. What are the symbolic parameters and what is the symbol of it?
+
+Ans - In general, a parameter should be regarded as symbolic if it changes with each program execution.
+
+8. Explain the difference between JOBLIB and the STEPLIB statements.
+
+Ans - In Job Control Language or JCL, JOBLIB specifies a library of programs or procedures that are 
+      available for all the steps within a job. STEPLIB specifies a library of programs or procedures 
+      that are specifically available to a particular job step.
+
+9. Which utility is used to run a COBOL-DB2 Program?
+
+Ans - IKJEFT01
+
+10. What is the use of INCLUDE and OMIT statement in sort?
+
+Ans - Include records and omit records
+
+
+11. If a dataset have 20 records and needs to be split into files. How will it work?
+
+
+VSAM
+
+1. What are the different types of VSAM datasets?
+
+Ans - KSDS,ESDS,LDS,RRDS
+
+2. What is an alternate index?
+
+Ans - An alternate index is a file that allows access to a VSAM dataset by a key other than the primary one.
+
+3. Do primary key values and alternate key values have to be unique?
+
+Ans - Primary key values must be unique and alternate key values need not be unique.
+
+4. What is the use of ALTER command in VSAM?
+
+Ans - ALTER command is used to change most of the VSAM dataset attributes that were specified while defining VSAM cluster.
+
+5. What are a few of the VSAM File status codes?
+
+Listed below are the common file status codes:
+
+00: The operation was successful.
+04: Fixed length record was invalid.
+20: The key for KSDS or RRDS is invalid.
+22: Duplicate primary key found.
+23: Error locating the record or file.
+30: Permanent I/O fault.
+38: Attempting to open a locked file.
+91: Invalid password or authorization.
+93: Resources are unavailable.
+95: Invalid or incomplete file information.
+98: File Locked- Failed to open the file.
+99: Record Locked - Failed to access record, etc.
+
+6. What is the use of Repro command?
+
+Ans - It loads and copies data from one VSAM to another.
+
+
+DB2
+
+
+1. What is DCLGEN in DB2?
+
+DCLGEN stands for Declarations generator. The programs that we write should declare the tables and views that it accesses
+
+2. What is a CURSOR and What is the use of it?
+
+CURSOR is a programming device that is used to find a set of rows corresponding to a SELECT statement. 
+However, the rows are displayed one at a time
+
+3.Write a Query to find the number of rows in a DB2 table.
+
+Here, the interviewer might ask you to write down the query on a piece of paper or a google doc or any other method. Mostly, the interviewers do not ask you to write a query upon a pre-existing table. 
+
+The query is:  SELECT COUNT * FROM tablename
+
+4.What is the picture clause of Null Indicator variable?
+
+S9(4) COMP is the picture clause of a null indicator.
+
+5. When you will face SQLCODE -803?
+
+When you will try to insert or update a record with duplicate key then you will face SQLCODE = -803.
+
+6. What happens in BIND step in a DB2 program?
+
+Bind step converts all the SQL statements into executable form in COBOL-DB2 program.
+
+7. When you will face SQLCODE -911?
+
+At the time of deadlock or timeout you will face SQLCODE -911.
+
+
+CICS
+
+1.What is a mapset?
+
+Mapset is a collection of maps which are linked edited together to form a load module. 
+It should have a PPT entry. It can have names from 1 to 7 chars.
+
+2. What are the differences between an EXEC CICS XCTL and an EXEC CICS LINK command?
+
+The XCTL command transfers the control to an application program at the same logical level and it does not 
+expect the control back, while the LINK command passes the control to an application program at the next logical 
+level and expects the control back.
+
+3. Into which table is the terminal id registered?
+
+Terminal Control Table.
+
+What is meant by PPT and what are its uses?
+
+PPT (Program Processing Table): – It consists of a list that has all the names of the programs in it along with maps. 
+Furthermore, it tells us whether the version that is absolutely recent as available as a program in CICS or a
+ fresh copy of the program is supposed to be loaded.
+
+4. Differentiate between PCT and FCT.
+
+PCT stands for Program Control Table and it has a complete list of transaction identifiers that are paired to respective corresponding programs.
+FCT, on the other hand, stands for File Control Table has a complete list of all the files that have been used by CICS along with their status and record length.
+
+
+5. Give the definition of COMMAREA ?
+
+COMMAREA is commonly termed as a communication area as it happens to be for temporary storage area. 
+It is used as a passing medium for data amongst multiple programs that are loaded by a set of transactions or a 
+particular transaction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

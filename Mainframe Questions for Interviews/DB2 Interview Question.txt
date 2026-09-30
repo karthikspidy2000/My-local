@@ -1,0 +1,316 @@
+DB2
+
+Here are **DB2 interview questions** with concise one-line answers for candidates with **10 years of experience**:
+
+---
+
+### **General DB2 Concepts**
+1. **What is DB2?**  
+   - DB2 is IBM's relational database management system designed for high-performance data storage and retrieval.
+
+2. **What are the types of DB2 objects?**  
+   - Tables, Views, Indexes, Tablespaces, Schemas, Stored Procedures, and Triggers.
+
+3. **What is the difference between a table and a tablespace in DB2?**  
+   - A table stores data, while a tablespace is a logical storage unit that holds tables.
+
+4. **What is the purpose of the DB2 catalog?**  
+   - It stores metadata about database objects like tables, indexes, and views.
+
+5. **What is the difference between `CHAR` and `VARCHAR` in DB2?**  
+   - `CHAR` has a fixed length, while `VARCHAR` has a variable length.
+
+---
+
+### **SQL Queries**
+6. **How do you fetch the first 10 rows from a table in DB2?**  
+   - Use `FETCH FIRST 10 ROWS ONLY` in the query.
+
+7. **What is the difference between `WHERE` and `HAVING` clauses?**  
+   - `WHERE` filters rows before grouping, while `HAVING` filters groups after aggregation.
+
+8. **How do you retrieve unique values from a column in DB2?**  
+   - Use the `DISTINCT` keyword in the query.
+
+9. **What is the purpose of the `GROUP BY` clause?**  
+   - It groups rows based on specified columns for aggregation.
+
+10. **How do you perform a join in DB2?**  
+    - Use `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, or `FULL JOIN` based on the requirement.
+
+---
+
+### **Indexes**
+11. **What is an index in DB2?**  
+    - An index is a database object that improves query performance by enabling faster data retrieval.
+
+12. **What is the difference between a clustered and non-clustered index?**  
+    - A clustered index physically organizes data, while a non-clustered index uses pointers.
+
+13. **How do you create an index in DB2?**  
+    - Use the `CREATE INDEX` statement.
+
+14. **What is the purpose of a unique index?**  
+    - It ensures that values in the indexed column(s) are unique.
+
+15. **How do indexes impact performance?**  
+    - Indexes improve read performance but may slow down write operations due to maintenance overhead.
+
+---
+
+### **DB2 Transactions**
+16. **What is a transaction in DB2?**  
+    - A transaction is a sequence of operations performed as a single logical unit of work.
+
+17. **What is the difference between `COMMIT` and `ROLLBACK`?**  
+    - `COMMIT` saves changes permanently, while `ROLLBACK` undoes uncommitted changes.
+
+18. **What is the purpose of isolation levels in DB2?**  
+    - Isolation levels control the visibility of uncommitted changes to other transactions.
+
+19. **What is the difference between `READ STABILITY` and `REPEATABLE READ` isolation levels?**  
+    - `READ STABILITY` prevents non-repeatable reads, while `REPEATABLE READ` prevents both non-repeatable and phantom reads.
+
+20. **How do you handle deadlocks in DB2?**  
+    - Use proper indexing, avoid long-running transactions, and implement retry logic.
+
+---
+
+### **DB2 Performance Optimization**
+21. **How do you optimize SQL queries in DB2?**  
+    - Use indexes, avoid unnecessary joins, and analyze query plans using `EXPLAIN`.
+
+22. **What is the purpose of the `RUNSTATS` utility in DB2?**  
+    - It collects statistics about tables and indexes to optimize query performance.
+
+23. **What is the difference between `FETCH FIRST` and `LIMIT` in DB2?**  
+    - `FETCH FIRST` is DB2-specific, while `LIMIT` is used in other databases.
+
+24. **How do you monitor DB2 performance?**  
+    - Use tools like **DB2 Performance Monitor** or analyze **SMF records**.
+
+25. **What is the purpose of the `REORG` utility in DB2?**  
+    - It reorganizes tablespaces and indexes to improve performance and reclaim space.
+
+---
+
+### **DB2 Error Handling**
+26. **What is SQLCODE in DB2?**  
+    - SQLCODE is a numeric code returned by DB2 to indicate the status of an SQL operation.
+
+27. **What does SQLCODE = 0 mean?**  
+    - It indicates successful execution of an SQL statement.
+
+28. **What does SQLCODE = -803 mean?**  
+    - It indicates a unique constraint violation.
+
+29. **How do you handle SQL errors in COBOL-DB2 programs?**  
+    - Use the `SQLCA` structure to capture and process error codes.
+
+30. **What is the difference between SQLCODE and SQLSTATE?**  
+    - SQLCODE is numeric, while SQLSTATE is alphanumeric and standardized across databases.
+
+---
+
+### **DB2 Utilities**
+31. **What is the purpose of the `LOAD` utility in DB2?**  
+    - It loads large volumes of data into DB2 tables efficiently.
+
+32. **What is the difference between `LOAD` and `IMPORT` utilities?**  
+    - `LOAD` is faster and bypasses constraints, while `IMPORT` enforces constraints.
+
+33. **What is the purpose of the `UNLOAD` utility in DB2?**  
+    - It extracts data from DB2 tables into external files.
+
+34. **What is the purpose of the `BACKUP` utility in DB2?**  
+    - It creates a backup of the database for recovery purposes.
+
+35. **What is the purpose of the `QUIESCE` utility in DB2?**  
+    - It temporarily halts database activity for maintenance or backup.
+
+---
+
+### **DB2 Cursors**
+36. **What is a cursor in DB2?**  
+    - A cursor is a pointer used to retrieve rows from a result set one at a time.
+
+37. **What is the difference between `WITH HOLD` and `WITHOUT HOLD` cursors?**  
+    - `WITH HOLD` cursors remain open after a commit, while `WITHOUT HOLD` cursors close automatically.
+
+38. **How do you declare a cursor in DB2?**  
+    - Use the `DECLARE CURSOR` statement.
+
+39. **What is the purpose of the `FETCH` statement in DB2?**  
+    - It retrieves rows from the cursor's result set.
+
+40. **How do you close a cursor in DB2?**  
+    - Use the `CLOSE` statement.
+
+---
+
+### **DB2 Real-World Scenarios**
+41. **How do you design a DB2 table for high-volume transactions?**  
+    - Use proper indexing, partitioning, and normalization.
+
+42. **How do you handle concurrent updates in DB2?**  
+    - Use appropriate isolation levels and locking mechanisms.
+
+43. **How do you migrate data from DB2 to another database?**  
+    - Use ETL tools or DB2 utilities like `UNLOAD` and `EXPORT`.
+
+44. **How do you integrate DB2 with COBOL programs?**  
+    - Use embedded SQL with the `EXEC SQL` statement.
+
+45. **How do you ensure data integrity in DB2 during batch processing?**  
+    - Use transactions with `COMMIT` and `ROLLBACK`, and validate data before updates.
+
+---
+
+### **Behavioral and Best Practices**
+46. **What are best practices for writing SQL queries in DB2?**  
+    - Use indexed columns, minimize joins, and avoid SELECT *.
+
+47. **How do you ensure maintainability of DB2 databases?**  
+    - Regularly run utilities like `RUNSTATS`, `REORG`, and `BACKUP`.
+
+48. **What challenges have you faced with DB2, and how did you resolve them?**  
+    - Share examples like optimizing slow queries or resolving deadlocks.
+
+49. **How do you handle DB2 database growth?**  
+    - Use partitioning, resizing tablespaces, and archiving old data.
+
+50. **How do you ensure scalability in DB2 database design?**  
+    - Plan for future growth with proper indexing, normalization, and partitioning.
+
+---
+
+### **Key Focus Areas**
+- Advanced DB2 concepts like isolation levels, performance tuning, and utilities.
+- Error handling and recovery strategies.
+- Real-world scenarios involving high-volume transactions and multi-user environments.
+- Integration with COBOL programs and external systems.
+
+These concise answers demonstrate expertise and practical knowledge in DB2 for experienced professionals.
+1. What is DCLGEN in DB2?
+
+DCLGEN stands for Declarations generator. The programs that we write should declare the tables and views that it accesses
+
+2. What is a CURSOR and What is the use of it?
+
+CURSOR is a programming device that is used to find a set of rows corresponding to a SELECT statement. 
+However, the rows are displayed one at a time
+
+3.Write a Query to find the number of rows in a DB2 table.
+
+Here, the interviewer might ask you to write down the query on a piece of paper or a google doc or any other method. Mostly, the interviewers do not ask you to write a query upon a pre-existing table. 
+
+The query is:  SELECT COUNT * FROM tablename
+
+4.What is the picture clause of Null Indicator variable?
+
+S9(4) COMP is the picture clause of a null indicator.
+
+5. When you will face SQLCODE -803?
+
+When you will try to insert or update a record with duplicate key then you will face SQLCODE = -803.
+
+6. What happens in BIND step in a DB2 program?
+
+Bind step converts all the SQL statements into executable form in COBOL-DB2 program.
+
+7. When you will face SQLCODE -911?
+
+At the time of deadlock or timeout you will face SQLCODE -911.
+
+What is a tablespace in DB2?
+
+A tablespace is a storage structure that contains tables, indexes, large objects, and long data. It provides a level of abstraction between the database and the physical storage.
+
+
+What is the difference between a primary key and a unique key in DB2?
+
+A primary key uniquely identifies each record in a table and cannot contain NULL values. A unique key also ensures uniqueness but can contain NULL values.
+
+
+How do you sort records in a DB2 table?
+
+SELECT * FROM table_name ORDER BY column1 [ASC|DESC];
+
+How do you use a subquery in DB2?
+
+SELECT column1
+FROM table_name
+WHERE column2 = (SELECT column2 FROM another_table WHERE condition);
+
+
+
+GitHub Copilot
+DB2 SQLCODES are codes returned by the DB2 database management system to indicate the outcome of SQL operations. Here are some common DB2 SQLCODES:
+
+Successful Execution
++000: Execution was successful.
+Warning Codes
++100: Row not found or end of cursor.
++222: A FETCH statement returned no data because the result set is empty.
++802: Exception error occurred during numeric operation (e.g., division by zero).
+Error Codes
+-007: Illegal character in SQL statement.
+-010: String constant is too long.
+-029: INTO clause is required.
+-117: The number of values assigned is not the same as the number of specified or implied columns.
+-180: Invalid date, time, or timestamp value.
+-204: Object not defined to DB2 (e.g., table or view does not exist).
+-206: Column name not in specified table.
+-302: Value too large for the column.
+-305: Null indicator needed.
+-407: An update or insert value is null, but the column cannot contain nulls.
+-530: Referential integrity constraint violation (foreign key).
+-532: Referential integrity constraint violation (delete).
+-803: Duplicate key value violates unique constraint.
+-805: DBRM or package not found in plan.
+-811: More than one row returned in a subquery.
+-818: Timestamp mismatch between application program and package.
+-904: Resource not available (e.g., table space is full).
+-911: Deadlock or timeout.
+-913: Deadlock or timeout with rollback.
+-922: Authorization failure.
+
+
+To insert null values into a DB2 table using an SQL query, you can use the `NULL` keyword. Here is an example:
+
+### Inserting Null Values
+To insert a row with some columns having null values, you can use the following SQL statement:
+
+```sql
+INSERT INTO employees (emp_id, emp_name, emp_salary, emp_department)
+VALUES (1, 'John Doe', NULL, NULL);
+```
+
+In this example:
+- `emp_salary` and `emp_department` are set to `NULL`.
+
+### Inserting Null Values with Host Variables in COBOL
+If you are using COBOL with embedded SQL, you need to use null indicators to handle null values. Here is an example:
+
+### COBOL Example
+```cobol
+WORKING-STORAGE SECTION.
+01 EMP-ID            PIC 9(5) VALUE 1.
+01 EMP-NAME          PIC X(100) VALUE 'John Doe'.
+01 EMP-SALARY        PIC S9(9)V99 COMP-3.
+01 EMP-DEPARTMENT    PIC X(50).
+01 NULL-INDICATOR    PIC S9(4) COMP VALUE -1.
+
+PROCEDURE DIVISION.
+    EXEC SQL
+        INSERT INTO employees (emp_id, emp_name, emp_salary, emp_department)
+        VALUES (:EMP-ID, :EMP-NAME, :EMP-SALARY :NULL-INDICATOR, :EMP-DEPARTMENT :NULL-INDICATOR)
+    END-EXEC.
+```
+
+In this example:
+- `NULL-INDICATOR` is used to indicate that `EMP-SALARY` and `EMP-DEPARTMENT` should be set to `NULL`.
+
+### Summary
+- Use the `NULL` keyword to insert null values directly in SQL.
+- Use null indicators in COBOL to handle null values when inserting data into DB2 tables.
